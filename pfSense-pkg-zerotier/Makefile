@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
-MAINTAINER=	grmoore18@gmail.com
+MAINTAINER=	helpdesk@skillnet.com.co
 COMMENT=	pfSense package zerotier
 
 LICENSE=	APACHE20

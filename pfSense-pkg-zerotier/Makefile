@@ -1,5 +1,6 @@
 # $FreeBSD$
 
+OSVERSION!=sysctl -n kern.osreldate
 PORTNAME=	pfSense-pkg-zerotier
 PORTVERSION=	0.00.1
 CATEGORIES=	net

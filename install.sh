@@ -3,7 +3,11 @@
 #Requisitos
 mkdir -R /usr/ports/Mk
 #Paquetes
-pkg install git
+cp /usr/local/etc/pkg/repos/pfSense.conf /usr/local/etc/pkg/repos/pfSense.conf.bk
+sed '1d' /usr/local/etc/pkg/repos/pfSense.conf.bk >  /usr/local/etc/pkg/repos/pfSense.conf
+echo "FreeBSD: { enabled: yes }" >> /usr/local/etc/pkg/repos/pfSense.conf
+yes | pkg install git gcc
+cat /usr/local/etc/pkg/repos/pfSense.conf.bk > /usr/local/etc/pkg/repos/pfSense.conf
 pkg add http://pkg.freebsd.org/freebsd:12:x86:64/latest/All/zerotier-1.6.5.txz 
 #Directorio
 cd /tmp/
